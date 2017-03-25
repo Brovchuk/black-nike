@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nike Black</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="goods">
+			<div class="goods__logo">
+				<img src="img/logo.png">
+			</div>
+<div class="goods__preview" id="data" >
+					<div class="goods__slider">
+						<form>
+							<ul>
+								<li>
+									<input id="slide_1" type="radio" name="slide" checked>
+									<img class="goods__slider_preview" src="img/Nike-SB-Stefan-Janoski-Max-Grey1.png">
+								</li>
+								<li>
+									<input id="slide_2" type="radio" name="slide">
+									<img class="goods__slider_preview" src="img/Nike-SB-Stefan-Janoski-Max-Suede-Cool-Grey.png">
+								<li>
+								</li>
+									<input id="slide_3" type="radio" name="slide">
+									<img class="goods__slider_preview" src="img/Nike-SB-Stefan-Janoski-Max-Suede-Fish-Ladder.png">
+								</li>
+							</ul>							
+						</form>
+
+						<div class="goods__slider_control">
+								<label for="slide_1" class="goods__slide-item" active>
+									<img src="img/Nike-SB-Stefan-Janoski-Max-Grey1.png">
+								</label>
+								<label for="slide_2" class="goods__slide-item">
+									<img src="img/Nike-SB-Stefan-Janoski-Max-Suede-Cool-Grey.png">
+								</label>
+								<label for="slide_3" class="goods__slide-item">
+									<img src="img/Nike-SB-Stefan-Janoski-Max-Suede-Fish-Ladder.png">
+								</label>
+						</div>
+					</div>
+				</div>
+			<div class="goods__description">
+				<div class="goods__name">
+					<h2> Nike SB Stefan <br>Janoski Max </h2>
+				</div>
+				<div class="text">
+					Unisex Skateboarding Shoe
+				</div>
+				<div class="goods__evaluation">
+					<div id="reviewStars-input">
+					    <input id="star-4" type="radio" name="reviewStars"/>
+					    <label title="gorgeous" for="star-4"></label>
+
+					    <input id="star-3" type="radio" name="reviewStars"/>
+					    <label title="good" for="star-3"></label>
+
+					    <input id="star-2" type="radio" name="reviewStars"/>
+					    <label title="regular" for="star-2"></label>
+
+					    <input id="star-1" type="radio" name="reviewStars"/>
+					    <label title="poor" for="star-1"></label>
+
+					    <input id="star-0" type="radio" name="reviewStars"/>
+					    <label title="bad" for="star-0"></label>
+				<select name="size" class="goods__size">
+					<option value="SIZE" selected>SIZE</option>
+					<option value="40">40</option>
+					<option value="41">41</option>
+					<option value="42">42</option>
+					<option value="43">43</option>
+					<option value="44">44</option>
+					<option value="45">45</option>
+				</select>
+
+				<select name="QTY" class="goods__qty">
+					<option value="Qty">Qty</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+
+				<form class="goods__button">
+					Add to cart
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		(function(){
+			var collection = document.querySelectorAll('.goods__slide-item');
+			collection.forEach(function(item){
+				item.addEventListener('click', function(){
+					var el = this;
+					
+					collection.forEach(function(i){
+						i.classList.remove('active');						});
+						el.classList.add('active');
+					})
+				});
+			}());
+	</script>
+</body>
+</html>
